@@ -1,0 +1,20 @@
+App Key Rotation/Import Keys - Pipeline testing and documentation
+
+App Key Rotation/Import Keys - Pipeline testing and documentation.
+
+Existing ApigeeX Config pipeline supports the maven action "importKeys". Please test this functionality by following the instructions provided @
+https://github.com/apigee/apigee-config-maven-plugin 
+
+
+- Create an app using APIHub UI
+
+- In the gitlab codebase for the the newly created app, use importKeys.json file with custom credentials as mentioned in the documentation
+
+- Update the gitlab-ci.yml file of the newly created app to set the action as importKeys and execute the pipeline.
+
+- Upon successful pipeline run, verify the app in the APIHub UI -> Audit Dashboard -> Apps to verify if new credentials included in the imoortKeys.json file got successfully updated
+
+- Document the instructions for above steps so that BU performing bulk custom credentials import 
+
+- Document the instrcution for above for UI team for integration
+
